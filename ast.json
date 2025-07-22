@@ -1,0 +1,1047 @@
+{
+  "modules": [
+    {
+      "name": "0x1::vector",
+      "structs": [],
+      "functions": [
+        {
+          "name": "contains",
+          "params": [
+            "v: &vector<Element>",
+            "e: &Element"
+          ],
+          "ret": "bool",
+          "attrs": [],
+          "body": {
+            "kind": "Block",
+            "value": null,
+            "children": [
+              {
+                "kind": "Block",
+                "value": null,
+                "children": [
+                  {
+                    "kind": "Unhandled::Sequence(NodeId(52), [0x123b2b5b0 : Loop(NodeId(50), 0x123b2b240 : IfElse(NodeId(50), 0x123b2b450 : Call(NodeId(33), Lt, [0x123b292a0 : LocalVar(NodeId(31), Symbol(72)), 0x123b29320 : LocalVar(NodeId(32), Symbol(42))]), 0x123b2b140 : Sequence(NodeId(49), [0x123b2b3a0 : IfElse(NodeId(42), 0x123b2d3c0 : Call(NodeId(41), Eq, [0x123b2b530 : Call(NodeId(39), MoveFunction(ModuleId(0), FunId(Symbol(69))), [0x123b2aca0 : Temporary(NodeId(37), 0), 0x123b2ad50 : LocalVar(NodeId(38), Symbol(72))]), 0x123b2b320 : Temporary(NodeId(40), 1)]), 0x123b29cd0 : Return(NodeId(35), 0x123b29c50 : Value(NodeId(34), Bool(true))), 0x123b29d50 : Call(NodeId(36), Tuple, [])), 0x123b29ff0 : Assign(NodeId(47), Var(NodeId(46), Symbol(72)), 0x123b2ba60 : Call(NodeId(45), Add, [0x123b2afc0 : LocalVar(NodeId(43), Symbol(72)), 0x123b2b040 : Value(NodeId(44), Number(1))])), 0x123b2b0c0 : Call(NodeId(48), Tuple, [])]), 0x123b2b1c0 : LoopCont(NodeId(50), 0, false))), 0x123b2b630 : Value(NodeId(51), Bool(false))])",
+                    "value": null,
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "index_of",
+          "params": [
+            "v: &vector<Element>",
+            "e: &Element"
+          ],
+          "ret": "(bool, u64)",
+          "attrs": [],
+          "body": {
+            "kind": "Block",
+            "value": null,
+            "children": [
+              {
+                "kind": "Block",
+                "value": null,
+                "children": [
+                  {
+                    "kind": "Unhandled::Sequence(NodeId(180), [0x123b30aa0 : Loop(NodeId(176), 0x123b30a20 : IfElse(NodeId(176), 0x123b2ede0 : Call(NodeId(157), Lt, [0x123b2ec10 : LocalVar(NodeId(155), Symbol(72)), 0x123b2ed60 : LocalVar(NodeId(156), Symbol(42))]), 0x123b30180 : Sequence(NodeId(175), [0x123b2fa90 : IfElse(NodeId(168), 0x123b32800 : Call(NodeId(167), Eq, [0x123b30280 : Call(NodeId(165), MoveFunction(ModuleId(0), FunId(Symbol(69))), [0x123b2fbf0 : Temporary(NodeId(163), 0), 0x123b2fc70 : LocalVar(NodeId(164), Symbol(72))]), 0x123b2fee0 : Temporary(NodeId(166), 1)]), 0x123b2c940 : Return(NodeId(161), 0x123b2ca60 : Call(NodeId(160), Tuple, [0x123b2c8c0 : Value(NodeId(158), Bool(true)), 0x123b2c9e0 : LocalVar(NodeId(159), Symbol(72))])), 0x123b2f400 : Call(NodeId(162), Tuple, [])), 0x123b2ff60 : Assign(NodeId(173), Var(NodeId(172), Symbol(72)), 0x123b307b0 : Call(NodeId(171), Add, [0x123b30000 : LocalVar(NodeId(169), Symbol(72)), 0x123b30080 : Value(NodeId(170), Number(1))])), 0x123b30100 : Call(NodeId(174), Tuple, [])]), 0x123b30200 : LoopCont(NodeId(176), 0, false))), 0x123b30690 : Call(NodeId(179), Tuple, [0x123b30b20 : Value(NodeId(177), Bool(false)), 0x123b305c0 : Value(NodeId(178), Number(0))])])",
+                    "value": null,
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "append",
+          "params": [
+            "lhs: &mut vector<Element>",
+            "other: vector<Element>"
+          ],
+          "ret": "()",
+          "attrs": [],
+          "body": {
+            "kind": "Unhandled::Sequence(NodeId(25), [0x123b29980 : Call(NodeId(11), MoveFunction(ModuleId(0), FunId(Symbol(93))), [0x123b28c40 : Call(NodeId(10), Borrow(Mutable), [0x123b28b90 : Temporary(NodeId(9), 1)])]), 0x123b297c0 : Loop(NodeId(21), 0x123b28e20 : IfElse(NodeId(21), 0x123b29a50 : Call(NodeId(15), Not, [0x123b298b0 : Call(NodeId(14), MoveFunction(ModuleId(0), FunId(Symbol(86))), [0x123b29740 : Call(NodeId(13), Borrow(Immutable), [0x123b29680 : Temporary(NodeId(12), 1)])])]), 0x123b29580 : Call(NodeId(20), MoveFunction(ModuleId(0), FunId(Symbol(91))), [0x123b28da0 : Temporary(NodeId(16), 0), 0x123b2a3e0 : Call(NodeId(19), MoveFunction(ModuleId(0), FunId(Symbol(90))), [0x123b294b0 : Call(NodeId(18), Borrow(Mutable), [0x123b293f0 : Temporary(NodeId(17), 1)])])]), 0x123b28cd0 : LoopCont(NodeId(21), 0, false))), 0x123b2a2e0 : Call(NodeId(23), MoveFunction(ModuleId(0), FunId(Symbol(75))), [0x123b2a1e0 : Temporary(NodeId(22), 1)]), 0x123b2a260 : Call(NodeId(24), Tuple, [])])",
+            "value": null,
+            "children": []
+          }
+        },
+        {
+          "name": "borrow",
+          "params": [
+            "v: &vector<Element>",
+            "i: u64"
+          ],
+          "ret": "&Element",
+          "attrs": [
+            {
+              "name": "bytecode_instruction",
+              "value": "Apply(NodeId(0), Symbol(70), [])"
+            }
+          ],
+          "body": null
+        },
+        {
+          "name": "borrow_mut",
+          "params": [
+            "v: &mut vector<Element>",
+            "i: u64"
+          ],
+          "ret": "&mut Element",
+          "attrs": [
+            {
+              "name": "bytecode_instruction",
+              "value": "Apply(NodeId(1), Symbol(70), [])"
+            }
+          ],
+          "body": null
+        },
+        {
+          "name": "destroy_empty",
+          "params": [
+            "v: vector<Element>"
+          ],
+          "ret": "()",
+          "attrs": [
+            {
+              "name": "bytecode_instruction",
+              "value": "Apply(NodeId(2), Symbol(70), [])"
+            }
+          ],
+          "body": null
+        },
+        {
+          "name": "empty",
+          "params": [],
+          "ret": "vector<Element>",
+          "attrs": [
+            {
+              "name": "bytecode_instruction",
+              "value": "Apply(NodeId(3), Symbol(70), [])"
+            }
+          ],
+          "body": null
+        },
+        {
+          "name": "filter",
+          "params": [
+            "v: vector<Element>",
+            "p: |&Element|bool"
+          ],
+          "ret": "vector<Element>",
+          "attrs": [],
+          "body": {
+            "kind": "Block",
+            "value": null,
+            "children": [
+              {
+                "kind": "Unhandled::Sequence(NodeId(74), [0x123b2bce0 : Call(NodeId(72), MoveFunction(ModuleId(0), FunId(Symbol(83))), [0x123b28f70 : Temporary(NodeId(57), 0), 0x123b2c0b0 : Lambda(NodeId(71), Var(NodeId(58), Symbol(106)), 0x123b2a6d0 : Sequence(NodeId(70), [0x123b2a5d0 : IfElse(NodeId(68), 0x123b2a550 : Invoke(NodeId(67), 0x123b285f0 : LocalVar(NodeId(66), Symbol(78)), [0x123b2d2d0 : Call(NodeId(65), Borrow(Immutable), [0x123b2d250 : LocalVar(NodeId(64), Symbol(106))])]), 0x123b28760 : Call(NodeId(62), MoveFunction(ModuleId(0), FunId(Symbol(91))), [0x123b2bde0 : Call(NodeId(60), Borrow(Mutable), [0x123b29180 : LocalVar(NodeId(59), Symbol(105))]), 0x123b28570 : LocalVar(NodeId(61), Symbol(106))]), 0x123b29050 : Call(NodeId(63), Tuple, [])), 0x123b2a650 : Call(NodeId(69), Tuple, [])]), Default, None)]), 0x123b28ed0 : LocalVar(NodeId(73), Symbol(105))])",
+                "value": null,
+                "children": []
+              }
+            ]
+          }
+        },
+        {
+          "name": "fold",
+          "params": [
+            "v: vector<Element>",
+            "init: Accumulator",
+            "f: |(Accumulator, Element)|Accumulator"
+          ],
+          "ret": "Accumulator",
+          "attrs": [],
+          "body": {
+            "kind": "Block",
+            "value": null,
+            "children": [
+              {
+                "kind": "Unhandled::Sequence(NodeId(89), [0x123b2c330 : Call(NodeId(87), MoveFunction(ModuleId(0), FunId(Symbol(83))), [0x123b29f20 : Temporary(NodeId(78), 0), 0x123b2d050 : Lambda(NodeId(86), Var(NodeId(79), Symbol(106)), 0x123b2cfd0 : Assign(NodeId(85), Var(NodeId(84), Symbol(107)), 0x123b2cf50 : Invoke(NodeId(83), 0x123b2beb0 : LocalVar(NodeId(82), Symbol(82)), [0x123b2bf30 : LocalVar(NodeId(80), Symbol(107)), 0x123b2bff0 : LocalVar(NodeId(81), Symbol(106))])), Default, None)]), 0x123b2af10 : LocalVar(NodeId(88), Symbol(107))])",
+                "value": null,
+                "children": []
+              }
+            ]
+          }
+        },
+        {
+          "name": "for_each",
+          "params": [
+            "v: vector<Element>",
+            "f: |Element|"
+          ],
+          "ret": "()",
+          "attrs": [],
+          "body": {
+            "kind": "Unhandled::Sequence(NodeId(110), [0x123b2ab50 : Call(NodeId(93), MoveFunction(ModuleId(0), FunId(Symbol(93))), [0x123b2c130 : Call(NodeId(92), Borrow(Mutable), [0x123b29e40 : Temporary(NodeId(91), 0)])]), 0x123b2c3b0 : Loop(NodeId(108), 0x123b2db50 : IfElse(NodeId(108), 0x123b2a850 : Call(NodeId(97), Not, [0x123b2a8d0 : Call(NodeId(96), MoveFunction(ModuleId(0), FunId(Symbol(86))), [0x123b2a7d0 : Call(NodeId(95), Borrow(Immutable), [0x123b2c250 : Temporary(NodeId(94), 0)])])]), 0x123b2da50 : Block(NodeId(107), Var(NodeId(101), Symbol(74)), Some(0x123b2d8d0 : Call(NodeId(100), MoveFunction(ModuleId(0), FunId(Symbol(90))), [0x123b2aa00 : Call(NodeId(99), Borrow(Mutable), [0x123b2a950 : Temporary(NodeId(98), 0)])])), 0x123b2d9d0 : Sequence(NodeId(106), [0x123b2dc70 : Invoke(NodeId(104), 0x123b2c1b0 : LocalVar(NodeId(103), Symbol(82)), [0x123b2aa80 : LocalVar(NodeId(102), Symbol(74))]), 0x123b2d950 : Call(NodeId(105), Tuple, [])])), 0x123b2dad0 : LoopCont(NodeId(108), 0, false))), 0x123b2c430 : Call(NodeId(109), Tuple, [])])",
+            "value": null,
+            "children": []
+          }
+        },
+        {
+          "name": "for_each_mut",
+          "params": [
+            "v: &mut vector<Element>",
+            "f: |&mut Element|"
+          ],
+          "ret": "()",
+          "attrs": [],
+          "body": {
+            "kind": "Block",
+            "value": null,
+            "children": [
+              {
+                "kind": "Loop",
+                "value": null,
+                "children": [
+                  {
+                    "kind": "IfElse",
+                    "value": null,
+                    "children": [
+                      {
+                        "kind": "Call::Lt",
+                        "value": null,
+                        "children": [
+                          {
+                            "kind": "LocalVar",
+                            "value": "i",
+                            "children": []
+                          },
+                          {
+                            "kind": "Call::MoveFunction(ModuleId(0), FunId(Symbol(87)))",
+                            "value": null,
+                            "children": [
+                              {
+                                "kind": "Call::Freeze(false)",
+                                "value": null,
+                                "children": [
+                                  {
+                                    "kind": "Unhandled::Temporary(NodeId(114), 0)",
+                                    "value": null,
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "Unhandled::Sequence(NodeId(128), [0x123b2c6f0 : Invoke(NodeId(122), 0x123b2bc20 : LocalVar(NodeId(121), Symbol(82)), [0x123b2de00 : Call(NodeId(120), MoveFunction(ModuleId(0), FunId(Symbol(73))), [0x123b2c5f0 : Temporary(NodeId(118), 0), 0x123b2c670 : LocalVar(NodeId(119), Symbol(72))])]), 0x123b2d730 : Assign(NodeId(127), Var(NodeId(126), Symbol(72)), 0x123b2e880 : Call(NodeId(125), Add, [0x123b2dcf0 : LocalVar(NodeId(123), Symbol(72)), 0x123b2dd70 : Value(NodeId(124), Number(1))]))])",
+                        "value": null,
+                        "children": []
+                      },
+                      {
+                        "kind": "Unhandled::LoopCont(NodeId(129), 0, false)",
+                        "value": null,
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "for_each_ref",
+          "params": [
+            "v: &vector<Element>",
+            "f: |&Element|"
+          ],
+          "ret": "()",
+          "attrs": [],
+          "body": {
+            "kind": "Block",
+            "value": null,
+            "children": [
+              {
+                "kind": "Loop",
+                "value": null,
+                "children": [
+                  {
+                    "kind": "IfElse",
+                    "value": null,
+                    "children": [
+                      {
+                        "kind": "Call::Lt",
+                        "value": null,
+                        "children": [
+                          {
+                            "kind": "LocalVar",
+                            "value": "i",
+                            "children": []
+                          },
+                          {
+                            "kind": "Call::MoveFunction(ModuleId(0), FunId(Symbol(87)))",
+                            "value": null,
+                            "children": [
+                              {
+                                "kind": "Unhandled::Temporary(NodeId(134), 0)",
+                                "value": null,
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "Unhandled::Sequence(NodeId(147), [0x123b2ee60 : Invoke(NodeId(141), 0x123b28810 : LocalVar(NodeId(140), Symbol(82)), [0x123b2ef90 : Call(NodeId(139), MoveFunction(ModuleId(0), FunId(Symbol(69))), [0x123b2e7e0 : Temporary(NodeId(137), 0), 0x123b2c840 : LocalVar(NodeId(138), Symbol(72))])]), 0x123b2eee0 : Assign(NodeId(146), Var(NodeId(145), Symbol(72)), 0x123b2f780 : Call(NodeId(144), Add, [0x123b2f010 : LocalVar(NodeId(142), Symbol(72)), 0x123b2f610 : Value(NodeId(143), Number(1))]))])",
+                        "value": null,
+                        "children": []
+                      },
+                      {
+                        "kind": "Unhandled::LoopCont(NodeId(148), 0, false)",
+                        "value": null,
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "is_empty",
+          "params": [
+            "v: &vector<Element>"
+          ],
+          "ret": "bool",
+          "attrs": [],
+          "body": {
+            "kind": "Call::Eq",
+            "value": null,
+            "children": [
+              {
+                "kind": "Call::MoveFunction(ModuleId(0), FunId(Symbol(87)))",
+                "value": null,
+                "children": [
+                  {
+                    "kind": "Unhandled::Temporary(NodeId(183), 0)",
+                    "value": null,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "Value",
+                "value": "Number(0)",
+                "children": []
+              }
+            ]
+          }
+        },
+        {
+          "name": "length",
+          "params": [
+            "v: &vector<Element>"
+          ],
+          "ret": "u64",
+          "attrs": [
+            {
+              "name": "bytecode_instruction",
+              "value": "Apply(NodeId(4), Symbol(70), [])"
+            }
+          ],
+          "body": null
+        },
+        {
+          "name": "map",
+          "params": [
+            "v: vector<Element>",
+            "f: |Element|NewElement"
+          ],
+          "ret": "vector<NewElement>",
+          "attrs": [],
+          "body": {
+            "kind": "Block",
+            "value": null,
+            "children": [
+              {
+                "kind": "Unhandled::Sequence(NodeId(200), [0x123b31130 : Call(NodeId(198), MoveFunction(ModuleId(0), FunId(Symbol(83))), [0x123b2f800 : Temporary(NodeId(189), 0), 0x123b2f880 : Lambda(NodeId(197), Var(NodeId(190), Symbol(106)), 0x123b31530 : Call(NodeId(196), MoveFunction(ModuleId(0), FunId(Symbol(91))), [0x123b308b0 : Call(NodeId(192), Borrow(Mutable), [0x123b30830 : LocalVar(NodeId(191), Symbol(105))]), 0x123b2e230 : Invoke(NodeId(195), 0x123b30930 : LocalVar(NodeId(194), Symbol(82)), [0x123b2e170 : LocalVar(NodeId(193), Symbol(106))])]), Default, None)]), 0x123b2ae00 : LocalVar(NodeId(199), Symbol(105))])",
+                "value": null,
+                "children": []
+              }
+            ]
+          }
+        },
+        {
+          "name": "pop_back",
+          "params": [
+            "v: &mut vector<Element>"
+          ],
+          "ret": "Element",
+          "attrs": [
+            {
+              "name": "bytecode_instruction",
+              "value": "Apply(NodeId(5), Symbol(70), [])"
+            }
+          ],
+          "body": null
+        },
+        {
+          "name": "push_back",
+          "params": [
+            "v: &mut vector<Element>",
+            "e: Element"
+          ],
+          "ret": "()",
+          "attrs": [
+            {
+              "name": "bytecode_instruction",
+              "value": "Apply(NodeId(6), Symbol(70), [])"
+            }
+          ],
+          "body": null
+        },
+        {
+          "name": "remove",
+          "params": [
+            "v: &mut vector<Element>",
+            "i: u64"
+          ],
+          "ret": "Element",
+          "attrs": [],
+          "body": {
+            "kind": "Block",
+            "value": null,
+            "children": [
+              {
+                "kind": "Unhandled::Sequence(NodeId(234), [0x123b31930 : IfElse(NodeId(212), 0x123b319c0 : Call(NodeId(211), Ge, [0x123b316d0 : Temporary(NodeId(209), 1), 0x123b318b0 : LocalVar(NodeId(210), Symbol(42))]), 0x123b2e590 : Call(NodeId(207), Abort, [0x123b2df00 : Value(NodeId(206), Number(131072))]), 0x123b315b0 : Call(NodeId(208), Tuple, [])), 0x123b31630 : Assign(NodeId(217), Var(NodeId(216), Symbol(42)), 0x123b32140 : Call(NodeId(215), Sub, [0x123b311b0 : LocalVar(NodeId(213), Symbol(42)), 0x123b31230 : Value(NodeId(214), Number(1))])), 0x123b323c0 : Loop(NodeId(231), 0x123b32340 : IfElse(NodeId(231), 0x123b32880 : Call(NodeId(220), Lt, [0x123b31fe0 : Temporary(NodeId(218), 1), 0x123b32060 : LocalVar(NodeId(219), Symbol(42))]), 0x123b324c0 : Call(NodeId(230), MoveFunction(ModuleId(0), FunId(Symbol(95))), [0x123b31370 : Temporary(NodeId(221), 0), 0x123b313f0 : Temporary(NodeId(222), 1), 0x123b322c0 : Sequence(NodeId(229), [0x123b32770 : Assign(NodeId(227), Var(NodeId(226), Symbol(72)), 0x123b326f0 : Call(NodeId(225), Add, [0x123b321c0 : Temporary(NodeId(223), 1), 0x123b32240 : Value(NodeId(224), Number(1))])), 0x123b31470 : Temporary(NodeId(228), 1)])]), 0x123b31f40 : LoopCont(NodeId(231), 0, false))), 0x123b30c20 : Call(NodeId(233), MoveFunction(ModuleId(0), FunId(Symbol(90))), [0x123b325e0 : Temporary(NodeId(232), 0)])])",
+                "value": null,
+                "children": []
+              }
+            ]
+          }
+        },
+        {
+          "name": "reverse",
+          "params": [
+            "v: &mut vector<Element>"
+          ],
+          "ret": "()",
+          "attrs": [],
+          "body": {
+            "kind": "Block",
+            "value": null,
+            "children": [
+              {
+                "kind": "Unhandled::Sequence(NodeId(275), [0x123b31bb0 : IfElse(NodeId(246), 0x123b32900 : Call(NodeId(245), Eq, [0x123b31ab0 : LocalVar(NodeId(243), Symbol(42)), 0x123b31b30 : Value(NodeId(244), Number(0))]), 0x123b2dfb0 : Return(NodeId(241), 0x123b32540 : Call(NodeId(240), Tuple, [])), 0x123b2b930 : Call(NodeId(242), Tuple, [])), 0x123b352f0 : Block(NodeId(274), Var(NodeId(248), Symbol(108)), Some(0x123b2b9b0 : Value(NodeId(247), Number(0))), 0x123b35270 : Block(NodeId(273), Var(NodeId(252), Symbol(109)), Some(0x123b30f50 : Call(NodeId(251), Sub, [0x123b28220 : LocalVar(NodeId(249), Symbol(42)), 0x123b32e80 : Value(NodeId(250), Number(1))])), 0x123b351f0 : Loop(NodeId(272), 0x123b35170 : IfElse(NodeId(272), 0x123b33200 : Call(NodeId(255), Lt, [0x123b32f00 : LocalVar(NodeId(253), Symbol(108)), 0x123b30fd0 : LocalVar(NodeId(254), Symbol(109))]), 0x123b35070 : Sequence(NodeId(271), [0x123b33180 : Call(NodeId(259), MoveFunction(ModuleId(0), FunId(Symbol(95))), [0x123b333a0 : Temporary(NodeId(256), 0), 0x123b32980 : LocalVar(NodeId(257), Symbol(108)), 0x123b32a00 : LocalVar(NodeId(258), Symbol(109))]), 0x123b31e30 : Assign(NodeId(264), Var(NodeId(263), Symbol(108)), 0x123b34c80 : Call(NodeId(262), Add, [0x123b32a80 : LocalVar(NodeId(260), Symbol(108)), 0x123b33000 : Value(NodeId(261), Number(1))])), 0x123b33080 : Assign(NodeId(269), Var(NodeId(268), Symbol(109)), 0x123b35390 : Call(NodeId(267), Sub, [0x123b34d00 : LocalVar(NodeId(265), Symbol(109)), 0x123b34f70 : Value(NodeId(266), Number(1))])), 0x123b34ff0 : Call(NodeId(270), Tuple, [])]), 0x123b350f0 : LoopCont(NodeId(272), 0, false)))))])",
+                "value": null,
+                "children": []
+              }
+            ]
+          }
+        },
+        {
+          "name": "singleton",
+          "params": [
+            "e: Element"
+          ],
+          "ret": "vector<Element>",
+          "attrs": [],
+          "body": {
+            "kind": "Block",
+            "value": null,
+            "children": [
+              {
+                "kind": "Unhandled::Sequence(NodeId(284), [0x123b2fdd0 : Call(NodeId(282), MoveFunction(ModuleId(0), FunId(Symbol(91))), [0x123b32c00 : Call(NodeId(280), Borrow(Mutable), [0x123b33310 : LocalVar(NodeId(279), Symbol(71))]), 0x123b32c80 : Temporary(NodeId(281), 0)]), 0x123b2fe50 : LocalVar(NodeId(283), Symbol(71))])",
+                "value": null,
+                "children": []
+              }
+            ]
+          }
+        },
+        {
+          "name": "swap",
+          "params": [
+            "v: &mut vector<Element>",
+            "i: u64",
+            "j: u64"
+          ],
+          "ret": "()",
+          "attrs": [
+            {
+              "name": "bytecode_instruction",
+              "value": "Apply(NodeId(7), Symbol(70), [])"
+            }
+          ],
+          "body": null
+        },
+        {
+          "name": "swap_remove",
+          "params": [
+            "v: &mut vector<Element>",
+            "i: u64"
+          ],
+          "ret": "Element",
+          "attrs": [],
+          "body": {
+            "kind": "Unhandled::Sequence(NodeId(308), [0x123b34bc0 : IfElse(NodeId(293), 0x123b339f0 : Call(NodeId(292), Not, [0x123b34890 : Call(NodeId(290), MoveFunction(ModuleId(0), FunId(Symbol(86))), [0x123b34810 : Call(NodeId(291), Freeze(false), [0x123b33ac0 : Temporary(NodeId(289), 0)])])]), 0x123b2fcf0 : Call(NodeId(286), Tuple, []), 0x123b34d80 : Call(NodeId(288), Abort, [0x123b35ac0 : Value(NodeId(287), Number(131072))])), 0x123b31d40 : Block(NodeId(307), Var(NodeId(299), Symbol(110)), Some(0x123b34470 : Call(NodeId(298), Sub, [0x123b28050 : Call(NodeId(295), MoveFunction(ModuleId(0), FunId(Symbol(87))), [0x123b27fd0 : Call(NodeId(296), Freeze(false), [0x123b349b0 : Temporary(NodeId(294), 0)])]), 0x123b34910 : Value(NodeId(297), Number(1))])), 0x123b34e00 : Sequence(NodeId(306), [0x123b345e0 : Call(NodeId(303), MoveFunction(ModuleId(0), FunId(Symbol(95))), [0x123b33670 : Temporary(NodeId(300), 0), 0x123b336f0 : Temporary(NodeId(301), 1), 0x123b31c40 : LocalVar(NodeId(302), Symbol(110))]), 0x123b356e0 : Call(NodeId(305), MoveFunction(ModuleId(0), FunId(Symbol(90))), [0x123b31cc0 : Temporary(NodeId(304), 0)])]))])",
+            "value": null,
+            "children": []
+          }
+        }
+      ],
+      "attrs": []
+    },
+    {
+      "name": "0x1::signer",
+      "structs": [],
+      "functions": [
+        {
+          "name": "address_of",
+          "params": [
+            "s: &signer"
+          ],
+          "ret": "address",
+          "attrs": [],
+          "body": {
+            "kind": "Call::Deref",
+            "value": null,
+            "children": [
+              {
+                "kind": "Call::MoveFunction(ModuleId(1), FunId(Symbol(116)))",
+                "value": null,
+                "children": [
+                  {
+                    "kind": "Unhandled::Temporary(NodeId(424), 0)",
+                    "value": null,
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "borrow_address",
+          "params": [
+            "s: &signer"
+          ],
+          "ret": "&address",
+          "attrs": [],
+          "body": null
+        }
+      ],
+      "attrs": []
+    },
+    {
+      "name": "0x1::error",
+      "structs": [],
+      "functions": [
+        {
+          "name": "aborted",
+          "params": [
+            "r: u64"
+          ],
+          "ret": "u64",
+          "attrs": [],
+          "body": {
+            "kind": "Call::MoveFunction(ModuleId(2), FunId(Symbol(124)))",
+            "value": null,
+            "children": [
+              {
+                "kind": "Value",
+                "value": "Number(7)",
+                "children": []
+              },
+              {
+                "kind": "Unhandled::Temporary(NodeId(441), 0)",
+                "value": null,
+                "children": []
+              }
+            ]
+          }
+        },
+        {
+          "name": "already_exists",
+          "params": [
+            "r: u64"
+          ],
+          "ret": "u64",
+          "attrs": [],
+          "body": {
+            "kind": "Call::MoveFunction(ModuleId(2), FunId(Symbol(124)))",
+            "value": null,
+            "children": [
+              {
+                "kind": "Value",
+                "value": "Number(8)",
+                "children": []
+              },
+              {
+                "kind": "Unhandled::Temporary(NodeId(444), 0)",
+                "value": null,
+                "children": []
+              }
+            ]
+          }
+        },
+        {
+          "name": "canonical",
+          "params": [
+            "category: u64",
+            "reason: u64"
+          ],
+          "ret": "u64",
+          "attrs": [],
+          "body": {
+            "kind": "Call::Add",
+            "value": null,
+            "children": [
+              {
+                "kind": "Call::Shl",
+                "value": null,
+                "children": [
+                  {
+                    "kind": "Unhandled::Temporary(NodeId(446), 0)",
+                    "value": null,
+                    "children": []
+                  },
+                  {
+                    "kind": "Value",
+                    "value": "Number(16)",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "Unhandled::Temporary(NodeId(449), 1)",
+                "value": null,
+                "children": []
+              }
+            ]
+          }
+        },
+        {
+          "name": "internal",
+          "params": [
+            "r: u64"
+          ],
+          "ret": "u64",
+          "attrs": [],
+          "body": {
+            "kind": "Call::MoveFunction(ModuleId(2), FunId(Symbol(124)))",
+            "value": null,
+            "children": [
+              {
+                "kind": "Value",
+                "value": "Number(11)",
+                "children": []
+              },
+              {
+                "kind": "Unhandled::Temporary(NodeId(452), 0)",
+                "value": null,
+                "children": []
+              }
+            ]
+          }
+        },
+        {
+          "name": "invalid_argument",
+          "params": [
+            "r: u64"
+          ],
+          "ret": "u64",
+          "attrs": [],
+          "body": {
+            "kind": "Call::MoveFunction(ModuleId(2), FunId(Symbol(124)))",
+            "value": null,
+            "children": [
+              {
+                "kind": "Value",
+                "value": "Number(1)",
+                "children": []
+              },
+              {
+                "kind": "Unhandled::Temporary(NodeId(455), 0)",
+                "value": null,
+                "children": []
+              }
+            ]
+          }
+        },
+        {
+          "name": "invalid_state",
+          "params": [
+            "r: u64"
+          ],
+          "ret": "u64",
+          "attrs": [],
+          "body": {
+            "kind": "Call::MoveFunction(ModuleId(2), FunId(Symbol(124)))",
+            "value": null,
+            "children": [
+              {
+                "kind": "Value",
+                "value": "Number(3)",
+                "children": []
+              },
+              {
+                "kind": "Unhandled::Temporary(NodeId(458), 0)",
+                "value": null,
+                "children": []
+              }
+            ]
+          }
+        },
+        {
+          "name": "not_found",
+          "params": [
+            "r: u64"
+          ],
+          "ret": "u64",
+          "attrs": [],
+          "body": {
+            "kind": "Call::MoveFunction(ModuleId(2), FunId(Symbol(124)))",
+            "value": null,
+            "children": [
+              {
+                "kind": "Value",
+                "value": "Number(6)",
+                "children": []
+              },
+              {
+                "kind": "Unhandled::Temporary(NodeId(461), 0)",
+                "value": null,
+                "children": []
+              }
+            ]
+          }
+        },
+        {
+          "name": "not_implemented",
+          "params": [
+            "r: u64"
+          ],
+          "ret": "u64",
+          "attrs": [],
+          "body": {
+            "kind": "Call::MoveFunction(ModuleId(2), FunId(Symbol(124)))",
+            "value": null,
+            "children": [
+              {
+                "kind": "Value",
+                "value": "Number(12)",
+                "children": []
+              },
+              {
+                "kind": "Unhandled::Temporary(NodeId(464), 0)",
+                "value": null,
+                "children": []
+              }
+            ]
+          }
+        },
+        {
+          "name": "out_of_range",
+          "params": [
+            "r: u64"
+          ],
+          "ret": "u64",
+          "attrs": [],
+          "body": {
+            "kind": "Call::MoveFunction(ModuleId(2), FunId(Symbol(124)))",
+            "value": null,
+            "children": [
+              {
+                "kind": "Value",
+                "value": "Number(2)",
+                "children": []
+              },
+              {
+                "kind": "Unhandled::Temporary(NodeId(467), 0)",
+                "value": null,
+                "children": []
+              }
+            ]
+          }
+        },
+        {
+          "name": "permission_denied",
+          "params": [
+            "r: u64"
+          ],
+          "ret": "u64",
+          "attrs": [],
+          "body": {
+            "kind": "Call::MoveFunction(ModuleId(2), FunId(Symbol(124)))",
+            "value": null,
+            "children": [
+              {
+                "kind": "Value",
+                "value": "Number(5)",
+                "children": []
+              },
+              {
+                "kind": "Unhandled::Temporary(NodeId(470), 0)",
+                "value": null,
+                "children": []
+              }
+            ]
+          }
+        },
+        {
+          "name": "resource_exhausted",
+          "params": [
+            "r: u64"
+          ],
+          "ret": "u64",
+          "attrs": [],
+          "body": {
+            "kind": "Call::MoveFunction(ModuleId(2), FunId(Symbol(124)))",
+            "value": null,
+            "children": [
+              {
+                "kind": "Value",
+                "value": "Number(9)",
+                "children": []
+              },
+              {
+                "kind": "Unhandled::Temporary(NodeId(473), 0)",
+                "value": null,
+                "children": []
+              }
+            ]
+          }
+        },
+        {
+          "name": "unauthenticated",
+          "params": [
+            "r: u64"
+          ],
+          "ret": "u64",
+          "attrs": [],
+          "body": {
+            "kind": "Call::MoveFunction(ModuleId(2), FunId(Symbol(124)))",
+            "value": null,
+            "children": [
+              {
+                "kind": "Value",
+                "value": "Number(4)",
+                "children": []
+              },
+              {
+                "kind": "Unhandled::Temporary(NodeId(476), 0)",
+                "value": null,
+                "children": []
+              }
+            ]
+          }
+        },
+        {
+          "name": "unavailable",
+          "params": [
+            "r: u64"
+          ],
+          "ret": "u64",
+          "attrs": [],
+          "body": {
+            "kind": "Call::MoveFunction(ModuleId(2), FunId(Symbol(124)))",
+            "value": null,
+            "children": [
+              {
+                "kind": "Value",
+                "value": "Number(13)",
+                "children": []
+              },
+              {
+                "kind": "Unhandled::Temporary(NodeId(479), 0)",
+                "value": null,
+                "children": []
+              }
+            ]
+          }
+        }
+      ],
+      "attrs": []
+    },
+    {
+      "name": "0x1::BasicCoin",
+      "structs": [
+        {
+          "name": "Balance",
+          "fields": [
+            "coin: Coin<CoinType>"
+          ],
+          "attrs": []
+        },
+        {
+          "name": "Coin",
+          "fields": [
+            "value: u64"
+          ],
+          "attrs": []
+        }
+      ],
+      "functions": [
+        {
+          "name": "balance_of",
+          "params": [
+            "owner: address"
+          ],
+          "ret": "u64",
+          "attrs": [],
+          "body": {
+            "kind": "Call::Select(ModuleId(3), StructId(Symbol(152)), FieldId(Symbol(178)))",
+            "value": null,
+            "children": [
+              {
+                "kind": "Call::Select(ModuleId(3), StructId(Symbol(150)), FieldId(Symbol(177)))",
+                "value": null,
+                "children": [
+                  {
+                    "kind": "Call::BorrowGlobal(Immutable)",
+                    "value": null,
+                    "children": [
+                      {
+                        "kind": "Unhandled::Temporary(NodeId(518), 0)",
+                        "value": null,
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "burn",
+          "params": [
+            "burn_addr: address",
+            "amount: u64",
+            "_witness: CoinType"
+          ],
+          "ret": "()",
+          "attrs": [],
+          "body": {
+            "kind": "Block",
+            "value": null,
+            "children": [
+              {
+                "kind": "Call::Tuple",
+                "value": null,
+                "children": []
+              }
+            ]
+          }
+        },
+        {
+          "name": "deposit",
+          "params": [
+            "addr: address",
+            "check: Coin<CoinType>"
+          ],
+          "ret": "()",
+          "attrs": [],
+          "body": {
+            "kind": "Block",
+            "value": null,
+            "children": [
+              {
+                "kind": "Block",
+                "value": null,
+                "children": [
+                  {
+                    "kind": "Block",
+                    "value": null,
+                    "children": [
+                      {
+                        "kind": "Unhandled::Sequence(NodeId(548), [0x123b0b930 : Mutate(NodeId(546), 0x123b0a1b0 : LocalVar(NodeId(545), Symbol(181)), 0x123b0b520 : Call(NodeId(544), Add, [0x123b0a250 : LocalVar(NodeId(542), Symbol(180)), 0x123b0a080 : LocalVar(NodeId(543), Symbol(178))])), 0x123b0b460 : Call(NodeId(547), Tuple, [])])",
+                        "value": null,
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "mint",
+          "params": [
+            "mint_addr: address",
+            "amount: u64",
+            "_witness: CoinType"
+          ],
+          "ret": "()",
+          "attrs": [],
+          "body": {
+            "kind": "Unhandled::Sequence(NodeId(557), [0x123b0bf70 : Call(NodeId(555), MoveFunction(ModuleId(3), FunId(Symbol(159))), [0x123b0b130 : Temporary(NodeId(552), 0), 0x123b0c2f0 : Call(NodeId(554), Pack(ModuleId(3), StructId(Symbol(152)), None), [0x123b0aee0 : Temporary(NodeId(553), 1)])]), 0x123b0af60 : Call(NodeId(556), Tuple, [])])",
+            "value": null,
+            "children": []
+          }
+        },
+        {
+          "name": "publish_balance",
+          "params": [
+            "account: &signer"
+          ],
+          "ret": "()",
+          "attrs": [],
+          "body": {
+            "kind": "Block",
+            "value": null,
+            "children": [
+              {
+                "kind": "Unhandled::Sequence(NodeId(575), [0x123b0d140 : IfElse(NodeId(569), 0x123b0d640 : Call(NodeId(568), Not, [0x123b0d5c0 : Call(NodeId(567), Exists(None), [0x123b0d540 : Call(NodeId(566), MoveFunction(ModuleId(1), FunId(Symbol(114))), [0x123b0d0c0 : Temporary(NodeId(565), 0)])])]), 0x123b0be10 : Call(NodeId(561), Tuple, []), 0x123b0c0c0 : Call(NodeId(564), Abort, [0x123b0c040 : Call(NodeId(563), MoveFunction(ModuleId(2), FunId(Symbol(123))), [0x123b0beb0 : Value(NodeId(562), Number(2))])])), 0x123b0aa90 : Call(NodeId(573), MoveTo, [0x123b0d290 : Temporary(NodeId(570), 0), 0x123b0d430 : Call(NodeId(572), Pack(ModuleId(3), StructId(Symbol(150)), None), [0x123b0c520 : LocalVar(NodeId(571), Symbol(182))])]), 0x123b0c480 : Call(NodeId(574), Tuple, [])])",
+                "value": null,
+                "children": []
+              }
+            ]
+          }
+        },
+        {
+          "name": "transfer",
+          "params": [
+            "from: &signer",
+            "to: address",
+            "amount: u64",
+            "_witness: CoinType"
+          ],
+          "ret": "()",
+          "attrs": [],
+          "body": {
+            "kind": "Block",
+            "value": null,
+            "children": [
+              {
+                "kind": "Unhandled::Sequence(NodeId(597), [0x123b0d930 : IfElse(NodeId(586), 0x123b0c7c0 : Call(NodeId(585), Neq, [0x123b0d9d0 : LocalVar(NodeId(583), Symbol(183)), 0x123b0da50 : Temporary(NodeId(584), 1)]), 0x123b0cef0 : Call(NodeId(580), Tuple, []), 0x123b0d8b0 : Call(NodeId(582), Abort, [0x123b088a0 : Value(NodeId(581), Number(4))])), 0x123b0ee00 : Block(NodeId(596), Var(NodeId(590), Symbol(161)), Some(0x123b0cd90 : Call(NodeId(589), MoveFunction(ModuleId(3), FunId(Symbol(169))), [0x123b0d760 : LocalVar(NodeId(587), Symbol(183)), 0x123b0d7e0 : Temporary(NodeId(588), 2)])), 0x123b0e980 : Sequence(NodeId(595), [0x123b0e900 : Call(NodeId(593), MoveFunction(ModuleId(3), FunId(Symbol(159))), [0x123b0ce10 : Temporary(NodeId(591), 1), 0x123b0ed80 : LocalVar(NodeId(592), Symbol(161))]), 0x123b0d6c0 : Call(NodeId(594), Tuple, [])]))])",
+                "value": null,
+                "children": []
+              }
+            ]
+          }
+        },
+        {
+          "name": "withdraw",
+          "params": [
+            "addr: address",
+            "amount: u64"
+          ],
+          "ret": "Coin<CoinType>",
+          "attrs": [],
+          "body": {
+            "kind": "Block",
+            "value": null,
+            "children": [
+              {
+                "kind": "Unhandled::Sequence(NodeId(624), [0x123b0a930 : IfElse(NodeId(608), 0x123b0a9c0 : Call(NodeId(607), Ge, [0x123b0a830 : LocalVar(NodeId(605), Symbol(180)), 0x123b0a8b0 : Temporary(NodeId(606), 1)]), 0x123b0ecd0 : Call(NodeId(602), Tuple, []), 0x123b0e850 : Call(NodeId(604), Abort, [0x123b0e740 : Value(NodeId(603), Number(1))])), 0x123b107d0 : Block(NodeId(623), Var(NodeId(614), Symbol(181)), Some(0x123b10750 : Call(NodeId(613), Borrow(Mutable), [0x123b0f810 : Call(NodeId(612), Select(ModuleId(3), StructId(Symbol(152)), FieldId(Symbol(178))), [0x123b0ef30 : Call(NodeId(611), Select(ModuleId(3), StructId(Symbol(150)), FieldId(Symbol(177))), [0x123b0e680 : Call(NodeId(610), BorrowGlobal(Mutable), [0x123b0e5d0 : Temporary(NodeId(609), 0)])])])])), 0x123b0e280 : Sequence(NodeId(622), [0x123b0cae0 : Mutate(NodeId(619), 0x123b0f280 : LocalVar(NodeId(618), Symbol(181)), 0x123b0e360 : Call(NodeId(617), Sub, [0x123b0c9e0 : LocalVar(NodeId(615), Symbol(180)), 0x123b0ca60 : Temporary(NodeId(616), 1)])), 0x123b0e200 : Call(NodeId(621), Pack(ModuleId(3), StructId(Symbol(152)), None), [0x123b0f010 : Temporary(NodeId(620), 1)])]))])",
+                "value": null,
+                "children": []
+              }
+            ]
+          }
+        }
+      ],
+      "attrs": []
+    }
+  ]
+}

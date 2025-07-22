@@ -1,0 +1,1005 @@
+{
+  "modules": [
+    {
+      "name": "vector",
+      "address": "0x1",
+      "is_script": false,
+      "structs": [],
+      "functions": [
+        {
+          "name": "contains",
+          "visibility": "Public",
+          "kind": "Regular",
+          "type_params": [
+            "Element"
+          ],
+          "parameters": [
+            {
+              "name": "v",
+              "ty": "&vector<Element>"
+            },
+            {
+              "name": "e",
+              "ty": "&Element"
+            }
+          ],
+          "results": [
+            "bool"
+          ],
+          "is_native": false,
+          "is_intrinsic": true,
+          "is_entry": false
+        },
+        {
+          "name": "index_of",
+          "visibility": "Public",
+          "kind": "Regular",
+          "type_params": [
+            "Element"
+          ],
+          "parameters": [
+            {
+              "name": "v",
+              "ty": "&vector<Element>"
+            },
+            {
+              "name": "e",
+              "ty": "&Element"
+            }
+          ],
+          "results": [
+            "bool",
+            "u64"
+          ],
+          "is_native": false,
+          "is_intrinsic": true,
+          "is_entry": false
+        },
+        {
+          "name": "append",
+          "visibility": "Public",
+          "kind": "Regular",
+          "type_params": [
+            "Element"
+          ],
+          "parameters": [
+            {
+              "name": "lhs",
+              "ty": "&mut vector<Element>"
+            },
+            {
+              "name": "other",
+              "ty": "vector<Element>"
+            }
+          ],
+          "results": [],
+          "is_native": false,
+          "is_intrinsic": true,
+          "is_entry": false
+        },
+        {
+          "name": "borrow",
+          "visibility": "Public",
+          "kind": "Regular",
+          "type_params": [
+            "Element"
+          ],
+          "parameters": [
+            {
+              "name": "v",
+              "ty": "&vector<Element>"
+            },
+            {
+              "name": "i",
+              "ty": "u64"
+            }
+          ],
+          "results": [
+            "&Element"
+          ],
+          "is_native": true,
+          "is_intrinsic": false,
+          "is_entry": false
+        },
+        {
+          "name": "borrow_mut",
+          "visibility": "Public",
+          "kind": "Regular",
+          "type_params": [
+            "Element"
+          ],
+          "parameters": [
+            {
+              "name": "v",
+              "ty": "&mut vector<Element>"
+            },
+            {
+              "name": "i",
+              "ty": "u64"
+            }
+          ],
+          "results": [
+            "&mut Element"
+          ],
+          "is_native": true,
+          "is_intrinsic": false,
+          "is_entry": false
+        },
+        {
+          "name": "destroy_empty",
+          "visibility": "Public",
+          "kind": "Regular",
+          "type_params": [
+            "Element"
+          ],
+          "parameters": [
+            {
+              "name": "v",
+              "ty": "vector<Element>"
+            }
+          ],
+          "results": [],
+          "is_native": true,
+          "is_intrinsic": false,
+          "is_entry": false
+        },
+        {
+          "name": "empty",
+          "visibility": "Public",
+          "kind": "Regular",
+          "type_params": [
+            "Element"
+          ],
+          "parameters": [],
+          "results": [
+            "vector<Element>"
+          ],
+          "is_native": true,
+          "is_intrinsic": false,
+          "is_entry": false
+        },
+        {
+          "name": "filter",
+          "visibility": "Public",
+          "kind": "Inline",
+          "type_params": [
+            "Element"
+          ],
+          "parameters": [
+            {
+              "name": "v",
+              "ty": "vector<Element>"
+            },
+            {
+              "name": "p",
+              "ty": "|&Element|bool"
+            }
+          ],
+          "results": [
+            "vector<Element>"
+          ],
+          "is_native": false,
+          "is_intrinsic": false,
+          "is_entry": false
+        },
+        {
+          "name": "fold",
+          "visibility": "Public",
+          "kind": "Inline",
+          "type_params": [
+            "Accumulator",
+            "Element"
+          ],
+          "parameters": [
+            {
+              "name": "v",
+              "ty": "vector<Element>"
+            },
+            {
+              "name": "init",
+              "ty": "Accumulator"
+            },
+            {
+              "name": "f",
+              "ty": "|(Accumulator, Element)|Accumulator"
+            }
+          ],
+          "results": [
+            "Accumulator"
+          ],
+          "is_native": false,
+          "is_intrinsic": false,
+          "is_entry": false
+        },
+        {
+          "name": "for_each",
+          "visibility": "Public",
+          "kind": "Inline",
+          "type_params": [
+            "Element"
+          ],
+          "parameters": [
+            {
+              "name": "v",
+              "ty": "vector<Element>"
+            },
+            {
+              "name": "f",
+              "ty": "|Element|"
+            }
+          ],
+          "results": [],
+          "is_native": false,
+          "is_intrinsic": false,
+          "is_entry": false
+        },
+        {
+          "name": "for_each_mut",
+          "visibility": "Public",
+          "kind": "Inline",
+          "type_params": [
+            "Element"
+          ],
+          "parameters": [
+            {
+              "name": "v",
+              "ty": "&mut vector<Element>"
+            },
+            {
+              "name": "f",
+              "ty": "|&mut Element|"
+            }
+          ],
+          "results": [],
+          "is_native": false,
+          "is_intrinsic": false,
+          "is_entry": false
+        },
+        {
+          "name": "for_each_ref",
+          "visibility": "Public",
+          "kind": "Inline",
+          "type_params": [
+            "Element"
+          ],
+          "parameters": [
+            {
+              "name": "v",
+              "ty": "&vector<Element>"
+            },
+            {
+              "name": "f",
+              "ty": "|&Element|"
+            }
+          ],
+          "results": [],
+          "is_native": false,
+          "is_intrinsic": false,
+          "is_entry": false
+        },
+        {
+          "name": "is_empty",
+          "visibility": "Public",
+          "kind": "Regular",
+          "type_params": [
+            "Element"
+          ],
+          "parameters": [
+            {
+              "name": "v",
+              "ty": "&vector<Element>"
+            }
+          ],
+          "results": [
+            "bool"
+          ],
+          "is_native": false,
+          "is_intrinsic": true,
+          "is_entry": false
+        },
+        {
+          "name": "length",
+          "visibility": "Public",
+          "kind": "Regular",
+          "type_params": [
+            "Element"
+          ],
+          "parameters": [
+            {
+              "name": "v",
+              "ty": "&vector<Element>"
+            }
+          ],
+          "results": [
+            "u64"
+          ],
+          "is_native": true,
+          "is_intrinsic": false,
+          "is_entry": false
+        },
+        {
+          "name": "map",
+          "visibility": "Public",
+          "kind": "Inline",
+          "type_params": [
+            "Element",
+            "NewElement"
+          ],
+          "parameters": [
+            {
+              "name": "v",
+              "ty": "vector<Element>"
+            },
+            {
+              "name": "f",
+              "ty": "|Element|NewElement"
+            }
+          ],
+          "results": [
+            "vector<NewElement>"
+          ],
+          "is_native": false,
+          "is_intrinsic": false,
+          "is_entry": false
+        },
+        {
+          "name": "pop_back",
+          "visibility": "Public",
+          "kind": "Regular",
+          "type_params": [
+            "Element"
+          ],
+          "parameters": [
+            {
+              "name": "v",
+              "ty": "&mut vector<Element>"
+            }
+          ],
+          "results": [
+            "Element"
+          ],
+          "is_native": true,
+          "is_intrinsic": false,
+          "is_entry": false
+        },
+        {
+          "name": "push_back",
+          "visibility": "Public",
+          "kind": "Regular",
+          "type_params": [
+            "Element"
+          ],
+          "parameters": [
+            {
+              "name": "v",
+              "ty": "&mut vector<Element>"
+            },
+            {
+              "name": "e",
+              "ty": "Element"
+            }
+          ],
+          "results": [],
+          "is_native": true,
+          "is_intrinsic": false,
+          "is_entry": false
+        },
+        {
+          "name": "remove",
+          "visibility": "Public",
+          "kind": "Regular",
+          "type_params": [
+            "Element"
+          ],
+          "parameters": [
+            {
+              "name": "v",
+              "ty": "&mut vector<Element>"
+            },
+            {
+              "name": "i",
+              "ty": "u64"
+            }
+          ],
+          "results": [
+            "Element"
+          ],
+          "is_native": false,
+          "is_intrinsic": true,
+          "is_entry": false
+        },
+        {
+          "name": "reverse",
+          "visibility": "Public",
+          "kind": "Regular",
+          "type_params": [
+            "Element"
+          ],
+          "parameters": [
+            {
+              "name": "v",
+              "ty": "&mut vector<Element>"
+            }
+          ],
+          "results": [],
+          "is_native": false,
+          "is_intrinsic": true,
+          "is_entry": false
+        },
+        {
+          "name": "singleton",
+          "visibility": "Public",
+          "kind": "Regular",
+          "type_params": [
+            "Element"
+          ],
+          "parameters": [
+            {
+              "name": "e",
+              "ty": "Element"
+            }
+          ],
+          "results": [
+            "vector<Element>"
+          ],
+          "is_native": false,
+          "is_intrinsic": false,
+          "is_entry": false
+        },
+        {
+          "name": "swap",
+          "visibility": "Public",
+          "kind": "Regular",
+          "type_params": [
+            "Element"
+          ],
+          "parameters": [
+            {
+              "name": "v",
+              "ty": "&mut vector<Element>"
+            },
+            {
+              "name": "i",
+              "ty": "u64"
+            },
+            {
+              "name": "j",
+              "ty": "u64"
+            }
+          ],
+          "results": [],
+          "is_native": true,
+          "is_intrinsic": false,
+          "is_entry": false
+        },
+        {
+          "name": "swap_remove",
+          "visibility": "Public",
+          "kind": "Regular",
+          "type_params": [
+            "Element"
+          ],
+          "parameters": [
+            {
+              "name": "v",
+              "ty": "&mut vector<Element>"
+            },
+            {
+              "name": "i",
+              "ty": "u64"
+            }
+          ],
+          "results": [
+            "Element"
+          ],
+          "is_native": false,
+          "is_intrinsic": true,
+          "is_entry": false
+        }
+      ]
+    },
+    {
+      "name": "signer",
+      "address": "0x1",
+      "is_script": false,
+      "structs": [],
+      "functions": [
+        {
+          "name": "address_of",
+          "visibility": "Public",
+          "kind": "Regular",
+          "type_params": [],
+          "parameters": [
+            {
+              "name": "s",
+              "ty": "&signer"
+            }
+          ],
+          "results": [
+            "address"
+          ],
+          "is_native": false,
+          "is_intrinsic": false,
+          "is_entry": false
+        },
+        {
+          "name": "borrow_address",
+          "visibility": "Public",
+          "kind": "Regular",
+          "type_params": [],
+          "parameters": [
+            {
+              "name": "s",
+              "ty": "&signer"
+            }
+          ],
+          "results": [
+            "&address"
+          ],
+          "is_native": true,
+          "is_intrinsic": false,
+          "is_entry": false
+        }
+      ]
+    },
+    {
+      "name": "error",
+      "address": "0x1",
+      "is_script": false,
+      "structs": [],
+      "functions": [
+        {
+          "name": "aborted",
+          "visibility": "Public",
+          "kind": "Regular",
+          "type_params": [],
+          "parameters": [
+            {
+              "name": "r",
+              "ty": "u64"
+            }
+          ],
+          "results": [
+            "u64"
+          ],
+          "is_native": false,
+          "is_intrinsic": false,
+          "is_entry": false
+        },
+        {
+          "name": "already_exists",
+          "visibility": "Public",
+          "kind": "Regular",
+          "type_params": [],
+          "parameters": [
+            {
+              "name": "r",
+              "ty": "u64"
+            }
+          ],
+          "results": [
+            "u64"
+          ],
+          "is_native": false,
+          "is_intrinsic": false,
+          "is_entry": false
+        },
+        {
+          "name": "canonical",
+          "visibility": "Public",
+          "kind": "Regular",
+          "type_params": [],
+          "parameters": [
+            {
+              "name": "category",
+              "ty": "u64"
+            },
+            {
+              "name": "reason",
+              "ty": "u64"
+            }
+          ],
+          "results": [
+            "u64"
+          ],
+          "is_native": false,
+          "is_intrinsic": false,
+          "is_entry": false
+        },
+        {
+          "name": "internal",
+          "visibility": "Public",
+          "kind": "Regular",
+          "type_params": [],
+          "parameters": [
+            {
+              "name": "r",
+              "ty": "u64"
+            }
+          ],
+          "results": [
+            "u64"
+          ],
+          "is_native": false,
+          "is_intrinsic": false,
+          "is_entry": false
+        },
+        {
+          "name": "invalid_argument",
+          "visibility": "Public",
+          "kind": "Regular",
+          "type_params": [],
+          "parameters": [
+            {
+              "name": "r",
+              "ty": "u64"
+            }
+          ],
+          "results": [
+            "u64"
+          ],
+          "is_native": false,
+          "is_intrinsic": false,
+          "is_entry": false
+        },
+        {
+          "name": "invalid_state",
+          "visibility": "Public",
+          "kind": "Regular",
+          "type_params": [],
+          "parameters": [
+            {
+              "name": "r",
+              "ty": "u64"
+            }
+          ],
+          "results": [
+            "u64"
+          ],
+          "is_native": false,
+          "is_intrinsic": false,
+          "is_entry": false
+        },
+        {
+          "name": "not_found",
+          "visibility": "Public",
+          "kind": "Regular",
+          "type_params": [],
+          "parameters": [
+            {
+              "name": "r",
+              "ty": "u64"
+            }
+          ],
+          "results": [
+            "u64"
+          ],
+          "is_native": false,
+          "is_intrinsic": false,
+          "is_entry": false
+        },
+        {
+          "name": "not_implemented",
+          "visibility": "Public",
+          "kind": "Regular",
+          "type_params": [],
+          "parameters": [
+            {
+              "name": "r",
+              "ty": "u64"
+            }
+          ],
+          "results": [
+            "u64"
+          ],
+          "is_native": false,
+          "is_intrinsic": false,
+          "is_entry": false
+        },
+        {
+          "name": "out_of_range",
+          "visibility": "Public",
+          "kind": "Regular",
+          "type_params": [],
+          "parameters": [
+            {
+              "name": "r",
+              "ty": "u64"
+            }
+          ],
+          "results": [
+            "u64"
+          ],
+          "is_native": false,
+          "is_intrinsic": false,
+          "is_entry": false
+        },
+        {
+          "name": "permission_denied",
+          "visibility": "Public",
+          "kind": "Regular",
+          "type_params": [],
+          "parameters": [
+            {
+              "name": "r",
+              "ty": "u64"
+            }
+          ],
+          "results": [
+            "u64"
+          ],
+          "is_native": false,
+          "is_intrinsic": false,
+          "is_entry": false
+        },
+        {
+          "name": "resource_exhausted",
+          "visibility": "Public",
+          "kind": "Regular",
+          "type_params": [],
+          "parameters": [
+            {
+              "name": "r",
+              "ty": "u64"
+            }
+          ],
+          "results": [
+            "u64"
+          ],
+          "is_native": false,
+          "is_intrinsic": false,
+          "is_entry": false
+        },
+        {
+          "name": "unauthenticated",
+          "visibility": "Public",
+          "kind": "Regular",
+          "type_params": [],
+          "parameters": [
+            {
+              "name": "r",
+              "ty": "u64"
+            }
+          ],
+          "results": [
+            "u64"
+          ],
+          "is_native": false,
+          "is_intrinsic": false,
+          "is_entry": false
+        },
+        {
+          "name": "unavailable",
+          "visibility": "Public",
+          "kind": "Regular",
+          "type_params": [],
+          "parameters": [
+            {
+              "name": "r",
+              "ty": "u64"
+            }
+          ],
+          "results": [
+            "u64"
+          ],
+          "is_native": false,
+          "is_intrinsic": false,
+          "is_entry": false
+        }
+      ]
+    },
+    {
+      "name": "BasicCoin",
+      "address": "0x1",
+      "is_script": false,
+      "structs": [
+        {
+          "name": "Balance",
+          "abilities": [
+            "Key"
+          ],
+          "type_params": [
+            "CoinType"
+          ],
+          "fields": [
+            {
+              "name": "coin",
+              "ty": "Coin<CoinType>",
+              "offset": 0,
+              "variant": null
+            }
+          ],
+          "is_native": false,
+          "is_ghost_memory": false
+        },
+        {
+          "name": "Coin",
+          "abilities": [
+            "Store"
+          ],
+          "type_params": [
+            "CoinType"
+          ],
+          "fields": [
+            {
+              "name": "value",
+              "ty": "u64",
+              "offset": 0,
+              "variant": null
+            }
+          ],
+          "is_native": false,
+          "is_ghost_memory": false
+        }
+      ],
+      "functions": [
+        {
+          "name": "balance_of",
+          "visibility": "Public",
+          "kind": "Regular",
+          "type_params": [
+            "CoinType"
+          ],
+          "parameters": [
+            {
+              "name": "owner",
+              "ty": "address"
+            }
+          ],
+          "results": [
+            "u64"
+          ],
+          "is_native": false,
+          "is_intrinsic": false,
+          "is_entry": false
+        },
+        {
+          "name": "burn",
+          "visibility": "Public",
+          "kind": "Regular",
+          "type_params": [
+            "CoinType"
+          ],
+          "parameters": [
+            {
+              "name": "burn_addr",
+              "ty": "address"
+            },
+            {
+              "name": "amount",
+              "ty": "u64"
+            },
+            {
+              "name": "_witness",
+              "ty": "CoinType"
+            }
+          ],
+          "results": [],
+          "is_native": false,
+          "is_intrinsic": false,
+          "is_entry": false
+        },
+        {
+          "name": "deposit",
+          "visibility": "Private",
+          "kind": "Regular",
+          "type_params": [
+            "CoinType"
+          ],
+          "parameters": [
+            {
+              "name": "addr",
+              "ty": "address"
+            },
+            {
+              "name": "check",
+              "ty": "Coin<CoinType>"
+            }
+          ],
+          "results": [],
+          "is_native": false,
+          "is_intrinsic": false,
+          "is_entry": false
+        },
+        {
+          "name": "mint",
+          "visibility": "Public",
+          "kind": "Regular",
+          "type_params": [
+            "CoinType"
+          ],
+          "parameters": [
+            {
+              "name": "mint_addr",
+              "ty": "address"
+            },
+            {
+              "name": "amount",
+              "ty": "u64"
+            },
+            {
+              "name": "_witness",
+              "ty": "CoinType"
+            }
+          ],
+          "results": [],
+          "is_native": false,
+          "is_intrinsic": false,
+          "is_entry": false
+        },
+        {
+          "name": "publish_balance",
+          "visibility": "Public",
+          "kind": "Regular",
+          "type_params": [
+            "CoinType"
+          ],
+          "parameters": [
+            {
+              "name": "account",
+              "ty": "&signer"
+            }
+          ],
+          "results": [],
+          "is_native": false,
+          "is_intrinsic": false,
+          "is_entry": false
+        },
+        {
+          "name": "transfer",
+          "visibility": "Public",
+          "kind": "Regular",
+          "type_params": [
+            "CoinType"
+          ],
+          "parameters": [
+            {
+              "name": "from",
+              "ty": "&signer"
+            },
+            {
+              "name": "to",
+              "ty": "address"
+            },
+            {
+              "name": "amount",
+              "ty": "u64"
+            },
+            {
+              "name": "_witness",
+              "ty": "CoinType"
+            }
+          ],
+          "results": [],
+          "is_native": false,
+          "is_intrinsic": false,
+          "is_entry": false
+        },
+        {
+          "name": "withdraw",
+          "visibility": "Private",
+          "kind": "Regular",
+          "type_params": [
+            "CoinType"
+          ],
+          "parameters": [
+            {
+              "name": "addr",
+              "ty": "address"
+            },
+            {
+              "name": "amount",
+              "ty": "u64"
+            }
+          ],
+          "results": [
+            "Coin<CoinType>"
+          ],
+          "is_native": false,
+          "is_intrinsic": false,
+          "is_entry": false
+        }
+      ]
+    }
+  ]
+}

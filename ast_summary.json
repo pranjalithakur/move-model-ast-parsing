@@ -1,0 +1,12 @@
+{
+  "modules": [
+    "vector",
+    "signer",
+    "error",
+    "BasicCoin"
+  ],
+  "stats": {
+    "structs": 2,
+    "functions": 44
+  }
+}
